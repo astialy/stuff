@@ -7,8 +7,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LostArkLogger", "LostArkLog
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AccessoryParser", "AccessoryParser\AccessoryParser.csproj", "{27082139-5A76-4F9B-A3C9-B75B9AD80FD0}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ParsedLogParser", "ParsedLogParser\ParsedLogParser.csproj", "{58B6DEC9-EA63-4379-94CF-EA564AF208BF}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AccessoryOptimizerLib", "AccessoryOptimizerLib\AccessoryOptimizerLib.csproj", "{EDBE2668-CB4C-4209-B26C-EF63438F2957}"
 EndProject
 Global
@@ -25,10 +23,6 @@ Global
 		{27082139-5A76-4F9B-A3C9-B75B9AD80FD0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{27082139-5A76-4F9B-A3C9-B75B9AD80FD0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{27082139-5A76-4F9B-A3C9-B75B9AD80FD0}.Release|Any CPU.Build.0 = Release|Any CPU
-		{58B6DEC9-EA63-4379-94CF-EA564AF208BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{58B6DEC9-EA63-4379-94CF-EA564AF208BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{58B6DEC9-EA63-4379-94CF-EA564AF208BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{58B6DEC9-EA63-4379-94CF-EA564AF208BF}.Release|Any CPU.Build.0 = Release|Any CPU
 		{EDBE2668-CB4C-4209-B26C-EF63438F2957}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{EDBE2668-CB4C-4209-B26C-EF63438F2957}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EDBE2668-CB4C-4209-B26C-EF63438F2957}.Release|Any CPU.ActiveCfg = Release|Any CPU
