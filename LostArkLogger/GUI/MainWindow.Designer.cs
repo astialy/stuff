@@ -138,7 +138,7 @@ namespace LostArkLogger
             this.label19 = new System.Windows.Forms.Label();
             this.sniffModeCheckbox = new System.Windows.Forms.CheckBox();
             this.label20 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
+            this.versionLabel = new System.Windows.Forms.Label();
             this.loggedAuctionPacketCountLabel = new System.Windows.Forms.Label();
             this.manualNegativeEngravingInputsCheckBox = new System.Windows.Forms.CheckBox();
             this.label23 = new System.Windows.Forms.Label();
@@ -1173,14 +1173,14 @@ namespace LostArkLogger
             this.label20.TabIndex = 102;
             this.label20.Text = "Parser by Shalzuth";
             // 
-            // label22
+            // versionLabel
             // 
-            this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(635, 12);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(69, 13);
-            this.label22.TabIndex = 103;
-            this.label22.Text = "Version 1.8.0";
+            this.versionLabel.AutoSize = true;
+            this.versionLabel.Location = new System.Drawing.Point(635, 12);
+            this.versionLabel.Name = "label22";
+            this.versionLabel.Size = new System.Drawing.Size(69, 13);
+            this.versionLabel.TabIndex = 103;
+            this.versionLabel.Text = "Version X.X.X";
             // 
             // loggedAuctionPacketCountLabel
             // 
@@ -1349,7 +1349,7 @@ namespace LostArkLogger
             this.Controls.Add(this.label5);
             this.Controls.Add(this.loggedAuctionPacketCountLabel);
             this.Controls.Add(this.engraving2Quantity_1);
-            this.Controls.Add(this.label22);
+            this.Controls.Add(this.versionLabel);
             this.Controls.Add(this.engraving3Choice);
             this.Controls.Add(this.label20);
             this.Controls.Add(this.label7);
@@ -1565,7 +1565,7 @@ namespace LostArkLogger
         private LinkLabel linkLabel1;
         private Label label20;
         private Label label21;
-        private Label label22;
+        private Label versionLabel;
         public Label loggedAuctionPacketCountLabel;
         private CheckBox manualNegativeEngravingInputsCheckBox;
         private Label label23;
