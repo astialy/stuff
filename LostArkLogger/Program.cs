@@ -97,11 +97,13 @@ namespace LostArkLogger
         {
             if (!new WindowsPrincipal(WindowsIdentity.GetCurrent()).IsInRole(WindowsBuiltInRole.Administrator))
             {
+                var currentProcess = Process.GetCurrentProcess();
+
                 var startInfo = new ProcessStartInfo
                 {
                     UseShellExecute = true,
                     WorkingDirectory = Environment.CurrentDirectory,
-                    FileName = Assembly.GetEntryAssembly().CodeBase.Replace(".dll", ".exe"),
+                    FileName = currentProcess.MainModule.FileName,
                     Verb = "runas"
                 };
                 try { Process.Start(startInfo); }
