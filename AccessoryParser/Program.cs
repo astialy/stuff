@@ -7,18 +7,8 @@ Main();
 
 void Main()
 {
-    bool workOutNecklace = false;
-    if (workOutNecklace)
-    {
-        WorkoutNecklace();
-    }
-
-    bool workOutEarring = true;
-
-    if (workOutEarring)
-    {
-        WorkoutEarring();
-    }
+     WorkoutNecklace();
+     //WorkoutEarring();
 }
 
 void WorkoutNecklace()
@@ -26,30 +16,30 @@ void WorkoutNecklace()
     byte[] necklaceBytes = GetNecklaceData();
     necklaceBytes = RemoveFromByteArray(necklaceBytes, 10);
 
-    byte[] buyout = GetValue(45000);
-    //byte[] bid = GetValue(25000);
+    byte[] buyout = GetValue(20000);
+    byte[] bid = GetValue(10000);
 
-    byte[] engraving1 = GetValue((int)EngravingType.Peacemaker);
-    byte[] engraving1Quantity = GetValue(4);
+    byte[] engraving1 = GetValue((int)EngravingType.Keen_Blunt_Weapon);
+    byte[] engraving1Quantity = GetValue(3);
 
-    byte[] engraving2 = GetValue((int)EngravingType.Disrespect);
+    byte[] engraving2 = GetValue((int)EngravingType.First_Intention);
     byte[] engraving2Quantity = GetValue(3);
 
     byte[] statType1 = GetValue((int)Stat_Type.Crit);
-    byte[] statType1Quantity = GetValue(488);
+    byte[] statType1Quantity = GetValue(448);
 
     byte[] statType2 = GetValue((int)Stat_Type.Swiftness);
-    byte[] statType2Quantity = GetValue(494);
+    byte[] statType2Quantity = GetValue(438);
 
-    byte[] negativeEngravingType = GetValue((int)EngravingType.Move_Speed_Reduction);
+    byte[] negativeEngravingType = GetValue((int)EngravingType.Atk_Power_Reduction);
     byte[] negativeEngravingQuantity = GetValue(2);
 
-    byte[] itemId = GetValue((int)NecklaceItemIds.Radiant_Inquirer_Necklace);
+    byte[] itemId = GetValue((int)NecklaceItemIds.Fallen_Chaos_Necklace);
 
     var buyout_byteToStart = Search(necklaceBytes, buyout.Reverse().ToArray());
     Console.WriteLine($"Buyout: {buyout_byteToStart}");
-    //var bid_byteToStart = Search(necklaceBytes, bid.Reverse().ToArray());
-    //Console.WriteLine($"Bid: {bid_byteToStart}");
+    var bid_byteToStart = Search(necklaceBytes, bid.Reverse().ToArray());
+    Console.WriteLine($"Bid: {bid_byteToStart}");
 
     var engraving1_byteToStart = Search(necklaceBytes, engraving1.Reverse().ToArray());
     var engraving1Quantity_byteToStart = engraving1_byteToStart + 5;
@@ -100,7 +90,7 @@ void WorkoutEarring()
     byte[] negativeEngravingType = GetValue((int)EngravingType.Defence_Reduction);
     byte[] negativeEngravingQuantity = GetValue(3);
 
-    byte[] itemId = GetValue(213300061);
+    byte[] itemId = GetValue((int)EarringItemIds.Radiant_Destroyer_Earrings);
 
     var buyout_byteToStart = Search(earringBytes, buyout.Reverse().ToArray());
     Console.WriteLine($"Buyout: {buyout_byteToStart}");
@@ -133,7 +123,8 @@ void WorkoutEarring()
 
 byte[] GetNecklaceData()
 {
-    return new byte[] { 1,0,0,0,0,0,0,0,0,0,181,110,197,5,0,0,0,0,1,64,156,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,49,233,115,2,0,0,96,48,82,179,182,12,0,0,67,0,1,0,0,0,0,0,0,0,1,0,0,0,31,24,108,23,1,0,0,0,0,0,0,0,0,0,0,0,0,5,0,0,5,0,244,1,0,0,1,1,0,0,120,0,0,0,1,0,0,0,144,1,0,0,18,0,0,0,2,240,1,0,0,244,1,0,0,1,1,0,0,120,0,0,0,1,0,0,0,144,1,0,0,15,0,0,0,2,239,1,0,0,3,0,0,0,3,3,0,0,105,0,0,0,1,0,0,0,1,0,0,0,33,3,0,0,3,1,0,0,0,5,0,0,0,2,3,0,0,105,0,0,0,1,0,0,0,5,0,0,0,121,0,0,0,3,5,0,0,0,3,0,0,0,1,3,0,0,105,0,0,0,1,0,0,0,3,0,0,0,248,0,0,0,3,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,200,175,0,0,0,0,0,0,0,0,208,7,0,0,0,0,0,0,64,156,0,0,0,0,0,0,230,135,250,120,154,128,0,0,20,50,5,0,0,0,0,0,1,0,0,0} ;
+    return new byte[] { 0, 0, 0, 0, 20, 50, 5, 0, 1, 0, 16, 39, 0, 0, 0, 0, 0, 0, 16, 39, 0, 0, 0, 0, 0, 0, 0, 15, 177, 171, 8, 0, 0, 0, 0, 0, 32, 78, 0, 0, 0, 0, 0, 0, 244, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 233, 103, 164, 5, 0, 0, 192, 10, 158, 44, 181, 12, 0, 0, 17, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 31, 24, 108, 23, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 5, 0, 0, 0, 0, 0, 0, 0, 0, 5, 0, 1, 0, 0, 0, 110, 0, 0, 0, 182, 1, 0, 0, 2, 69, 1, 0, 0, 194, 1, 0, 0, 1, 1, 0, 0, 18, 0, 0, 0, 1, 0, 0, 0, 110, 0, 0, 0, 192, 1, 0, 0, 2, 69, 1, 0, 0, 194, 1, 0, 0, 1, 1, 0, 0, 15, 0, 0, 0, 1, 0, 0, 0, 141, 12, 0, 0, 2, 0, 0, 0, 3, 1, 0, 0, 0, 3, 0, 0, 0, 3, 1, 0, 0, 32, 3, 0, 0, 1, 0, 0, 0, 141, 12, 0, 0, 3, 0, 0, 0, 3, 2, 0, 0, 0, 3, 0, 0, 0, 2, 1, 0, 0, 141, 0, 0, 0, 1, 0, 0, 0, 141, 12, 0, 0, 3, 0, 0, 0, 3, 3, 0, 0, 0, 3, 0, 0, 0, 1, 1, 46, 1, 189, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 230, 167, 126, 17, 207, 199, 0, 0, 1, 0, 0, 0 };
+
 }
 
 byte[] GetEarringData()
@@ -152,7 +143,7 @@ byte[] RemoveFromByteArray(byte[] src, int amountToDelete)
 
 int Search(byte[] src, byte[] pattern)
 {
-    Console.WriteLine(string.Join(",", pattern));
+    Console.WriteLine("\n" + string.Join(",", pattern));
     int maxFirstCharSlot = src.Length - pattern.Length + 1;
     for (int i = 0; i < maxFirstCharSlot; i++)
     {

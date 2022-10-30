@@ -13,25 +13,28 @@ namespace LostArkLogger
         internal const int Header_Length = 10;
 
         private const int Item_Id = 70;
-        
-        private const int Necklace_Length = 317 - Header_Length;
-        private const int Necklace_Stat_1_Type = 142;
-        private const int Necklace_Stat_1_Value = Necklace_Stat_1_Type + 8;
-        private const int Necklace_Stat_2_Type = 171;
-        private const int Necklace_Stat_2_Value = Necklace_Stat_2_Type + 8;
-        private const int Necklace_Engrav_1_Type = 229;
-        private const int Necklace_Engrav_1_Value = Necklace_Engrav_1_Type + 8;
-        private const int Necklace_Engrav_2_Type = 258;
-        private const int Necklace_Engrav_2_Value = Necklace_Engrav_2_Type + 8;
-        private const int Necklace_Neg_Engrave_Type = 200;
-        private const int Necklace_Neg_Engrave_Value = Necklace_Neg_Engrave_Type + 8;
-        private const int Necklace_Initial_Bid = 23;
-        private const int Necklace_Current_Bid = 283;
-        private const int Necklace_Buyout = 31;
 
-        private const int Ring_Length = 288 - Header_Length;
+        private const int End_Padding = 4;
+        private const int In_Btw_Padding = 2;
+        
+        private const int Necklace_Length = 317 - Header_Length - End_Padding;
+        private const int Necklace_Stat_1_Type = 172;
+        private const int Necklace_Stat_1_Value = Necklace_Stat_1_Type - 17;
+        private const int Necklace_Stat_2_Type = 143;
+        private const int Necklace_Stat_2_Value = Necklace_Stat_2_Type - 17;
+        private const int Necklace_Engrav_1_Type = 230;
+        private const int Necklace_Engrav_1_Value = Necklace_Engrav_1_Type - 17;
+        private const int Necklace_Engrav_2_Type = 259;
+        private const int Necklace_Engrav_2_Value = Necklace_Engrav_2_Type - 17;
+        private const int Necklace_Neg_Engrave_Type = 201;
+        private const int Necklace_Neg_Engrave_Value = Necklace_Neg_Engrave_Type - 17;
+        private const int Necklace_Initial_Bid = 0;
+        private const int Necklace_Current_Bid = 0;
+        private const int Necklace_Buyout = 26;
+
+        private const int Ring_Length = 288 - Header_Length - End_Padding;
         private const int Ring_Stat_1_Type = 143;
-        private const int Ring_Stat_1_Value = 126;
+        private const int Ring_Stat_1_Value = Ring_Stat_1_Type - 17;
         private const int Ring_Engrav_1_Type = 201;
         private const int Ring_Engrav_1_Value = Ring_Engrav_1_Type - 17;
         private const int Ring_Engrav_2_Type = 230;
@@ -132,7 +135,7 @@ namespace LostArkLogger
                 stats
             );
 
-            reader.Position = (beginOffset + Necklace_Length) * 8;
+            reader.Position = (beginOffset + Necklace_Length) * 8 + In_Btw_Padding;
 
             return accessory;
         }
@@ -171,7 +174,7 @@ namespace LostArkLogger
                 stats
             );
 
-            reader.Position = (beginOffset + Ring_Length) * 8;
+            reader.Position = (beginOffset + Ring_Length) * 8 + In_Btw_Padding;
 
             return accessory;
         }

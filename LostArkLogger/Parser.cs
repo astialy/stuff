@@ -213,7 +213,7 @@ namespace LostArkLogger
                     return;
                 }
                 var opcode = GetOpCode(packets);
-                Debug.WriteLine(opcode);
+                // Debug.WriteLine(opcode);
                 var packetSize = BitConverter.ToUInt16(packets.ToArray(), 0);
                 if (packets[5] != 1 || 6 > packets.Length || packetSize < 7)
                 {
