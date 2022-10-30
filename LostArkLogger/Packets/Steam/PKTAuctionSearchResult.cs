@@ -10,9 +10,9 @@ namespace LostArkLogger
         #region Network Fields Index
 
         // Build 1.331.367.1873750 - 2022-09-28
-        internal const int Header_Length = 14;
+        internal const int Header_Length = 10;
 
-        private const int Item_Id = 73 - Header_Length;
+        private const int Item_Id = 70;
         
         private const int Necklace_Length = 317 - Header_Length;
         private const int Necklace_Stat_1_Type = 142;
@@ -30,17 +30,17 @@ namespace LostArkLogger
         private const int Necklace_Buyout = 31;
 
         private const int Ring_Length = 288 - Header_Length;
-        private const int Ring_Stat_1_Type = 142;
-        private const int Ring_Stat_1_Value = Ring_Stat_1_Type + 8;
-        private const int Ring_Engrav_1_Type = 200;
-        private const int Ring_Engrav_1_Value = Ring_Engrav_1_Type + 8;
-        private const int Ring_Engrav_2_Type = 229;
-        private const int Ring_Engrav_2_Value = Ring_Engrav_2_Type + 8;
-        private const int Ring_Neg_Engrave_Type = 171;
-        private const int Ring_Neg_Engrave_Value = Ring_Neg_Engrave_Type + 8;
-        private const int Ring_Initial_Bid = 23;
-        private const int Ring_Current_Bid = 254;
-        private const int Ring_Buyout = 31;
+        private const int Ring_Stat_1_Type = 143;
+        private const int Ring_Stat_1_Value = 126;
+        private const int Ring_Engrav_1_Type = 201;
+        private const int Ring_Engrav_1_Value = Ring_Engrav_1_Type - 17;
+        private const int Ring_Engrav_2_Type = 230;
+        private const int Ring_Engrav_2_Value = Ring_Engrav_2_Type - 17;
+        private const int Ring_Neg_Engrave_Type = 172;
+        private const int Ring_Neg_Engrave_Value = Ring_Neg_Engrave_Type - 17;
+        private const int Ring_Initial_Bid = 0;
+        private const int Ring_Current_Bid = 0;
+        private const int Ring_Buyout = 26;
                 
         #endregion
 
@@ -91,7 +91,7 @@ namespace LostArkLogger
         private void DecodeHeader(BitReader reader)
         {
             var headerBytes = reader.ReadBytes(Header_Length);
-            var arrayLength = headerBytes[0];
+            var arrayLength = headerBytes[8];
 
             Accessories = new List<Accessory>(arrayLength);
         }
