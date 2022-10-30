@@ -8,7 +8,7 @@ namespace LostArkLogger
         {
             bytearray_1 = reader.ReadBytes(0);
             SourceId = reader.ReadUInt64();
-            bytearray_0 = reader.ReadBytes(7);
+            bytearray_0 = reader.ReadBytes(5);
             TargetId = reader.ReadUInt64();
             bytearray_2 = reader.ReadBytes(0);
         }
