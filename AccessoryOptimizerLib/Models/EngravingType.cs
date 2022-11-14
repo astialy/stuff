@@ -67,6 +67,8 @@
         Blessed_Aura = 283,
         Arthetinean_Skill = 284,
         Evolutionary_Legacy = 285,
+        Hunger = 286,
+        Lunar_Voice = 287,
         Master_Brawler = 288,
         Peacemaker = 289,
         Time_to_Hunt = 290,

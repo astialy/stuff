@@ -80,6 +80,8 @@ namespace AccessoryOptimizerLib.Services
                 [283] = "Blessed Aura",
                 [284] = "Arthetinean Skill",
                 [285] = "Evolutionary_Legacy",
+                [286] = "Hunger",
+                [287] = "Lunar Voice",
                 [288] = "Master Brawler",
                 [289] = "Peacemaker",
                 [290] = "Time to Hunt",
