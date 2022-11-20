@@ -7,8 +7,8 @@ Main();
 
 void Main()
 {
-     WorkoutNecklace();
-     //WorkoutEarring();
+    WorkoutNecklace();
+    //WorkoutEarring();
 }
 
 void WorkoutNecklace()
@@ -16,25 +16,25 @@ void WorkoutNecklace()
     byte[] necklaceBytes = GetNecklaceData();
     necklaceBytes = RemoveFromByteArray(necklaceBytes, 10);
 
-    byte[] buyout = GetValue(20000);
-    byte[] bid = GetValue(10000);
+    byte[] buyout = GetValue(155555);
+    byte[] bid = GetValue(88888);
 
-    byte[] engraving1 = GetValue((int)EngravingType.Keen_Blunt_Weapon);
-    byte[] engraving1Quantity = GetValue(3);
+    byte[] engraving1 = GetValue((int)EngravingType.Esoteric_Skill_Enhancement);
+    byte[] engraving1Quantity = GetValue(5);
 
-    byte[] engraving2 = GetValue((int)EngravingType.First_Intention);
+    byte[] engraving2 = GetValue((int)EngravingType.Raid_Captain);
     byte[] engraving2Quantity = GetValue(3);
 
     byte[] statType1 = GetValue((int)Stat_Type.Crit);
-    byte[] statType1Quantity = GetValue(448);
+    byte[] statType1Quantity = GetValue(495);
 
-    byte[] statType2 = GetValue((int)Stat_Type.Swiftness);
-    byte[] statType2Quantity = GetValue(438);
+    byte[] statType2 = GetValue((int)Stat_Type.Specialization);
+    byte[] statType2Quantity = GetValue(497);
 
     byte[] negativeEngravingType = GetValue((int)EngravingType.Atk_Power_Reduction);
     byte[] negativeEngravingQuantity = GetValue(2);
 
-    byte[] itemId = GetValue((int)NecklaceItemIds.Fallen_Chaos_Necklace);
+    byte[] itemId = GetValue((int)NecklaceItemIds.Wailing_Chaos_Necklace);
 
     var buyout_byteToStart = Search(necklaceBytes, buyout.Reverse().ToArray());
     Console.WriteLine($"Buyout: {buyout_byteToStart}");
@@ -75,22 +75,22 @@ void WorkoutEarring()
     byte[] earringBytes = GetEarringData();
     earringBytes = RemoveFromByteArray(earringBytes, 10);
 
-    byte[] buyout = GetValue(220000);
-    byte[] bid = GetValue(125000);
+    byte[] buyout = GetValue(250000);
+    byte[] bid = GetValue(220000);
 
     byte[] engraving1 = GetValue((int)EngravingType.Esoteric_Skill_Enhancement);
     byte[] engraving1Quantity = GetValue(5);
 
-    byte[] engraving2 = GetValue((int)EngravingType.Grudge);
+    byte[] engraving2 = GetValue((int)EngravingType.Adrenaline);
     byte[] engraving2Quantity = GetValue(3);
 
     byte[] statType1 = GetValue((int)Stat_Type.Swiftness);
-    byte[] statType1Quantity = GetValue(297);
+    byte[] statType1Quantity = GetValue(295);
 
-    byte[] negativeEngravingType = GetValue((int)EngravingType.Defence_Reduction);
-    byte[] negativeEngravingQuantity = GetValue(3);
+    byte[] negativeEngravingType = GetValue((int)EngravingType.Atk_Power_Reduction);
+    byte[] negativeEngravingQuantity = GetValue(2);
 
-    byte[] itemId = GetValue((int)EarringItemIds.Radiant_Destroyer_Earrings);
+    byte[] itemId = GetValue((int)EarringItemIds.Wailing_Aeon_Earrings);
 
     var buyout_byteToStart = Search(earringBytes, buyout.Reverse().ToArray());
     Console.WriteLine($"Buyout: {buyout_byteToStart}");
@@ -123,13 +123,12 @@ void WorkoutEarring()
 
 byte[] GetNecklaceData()
 {
-    return new byte[] { 0, 0, 0, 0, 20, 50, 5, 0, 1, 0, 16, 39, 0, 0, 0, 0, 0, 0, 16, 39, 0, 0, 0, 0, 0, 0, 0, 15, 177, 171, 8, 0, 0, 0, 0, 0, 32, 78, 0, 0, 0, 0, 0, 0, 244, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 233, 103, 164, 5, 0, 0, 192, 10, 158, 44, 181, 12, 0, 0, 17, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 31, 24, 108, 23, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 5, 0, 0, 0, 0, 0, 0, 0, 0, 5, 0, 1, 0, 0, 0, 110, 0, 0, 0, 182, 1, 0, 0, 2, 69, 1, 0, 0, 194, 1, 0, 0, 1, 1, 0, 0, 18, 0, 0, 0, 1, 0, 0, 0, 110, 0, 0, 0, 192, 1, 0, 0, 2, 69, 1, 0, 0, 194, 1, 0, 0, 1, 1, 0, 0, 15, 0, 0, 0, 1, 0, 0, 0, 141, 12, 0, 0, 2, 0, 0, 0, 3, 1, 0, 0, 0, 3, 0, 0, 0, 3, 1, 0, 0, 32, 3, 0, 0, 1, 0, 0, 0, 141, 12, 0, 0, 3, 0, 0, 0, 3, 2, 0, 0, 0, 3, 0, 0, 0, 2, 1, 0, 0, 141, 0, 0, 0, 1, 0, 0, 0, 141, 12, 0, 0, 3, 0, 0, 0, 3, 3, 0, 0, 0, 3, 0, 0, 0, 1, 1, 46, 1, 189, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 230, 167, 126, 17, 207, 199, 0, 0, 1, 0, 0, 0 };
-
+    return new byte[] {20,50,5,0,1,0,56,91,1,0,0,0,0,0,230,183,150,69,109,166,0,0,0,0,0,0,0,0,0,0,0,114,69,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,93,211,182,9,0,0,0,0,163,95,2,0,0,0,0,0,1,1,0,0,0,29,27,227,3,0,0,64,15,62,179,182,12,0,0,11,0,1,0,0,0,0,0,0,0,1,0,0,0,31,24,108,23,1,0,0,0,0,0,0,0,2,0,0,0,0,5,0,0,0,0,0,0,0,0,0,0,0,0,0,5,0,244,1,0,0,110,0,0,0,16,0,0,0,241,1,0,0,2,1,0,0,0,1,1,0,0,144,1,0,0,244,1,0,0,110,0,0,0,15,0,0,0,239,1,0,0,2,1,0,0,0,1,1,0,0,144,1,0,0,3,0,0,0,105,0,0,0,32,3,0,0,2,0,0,0,3,1,0,0,0,3,8,0,0,1,0,0,0,5,0,0,0,105,0,0,0,127,0,0,0,5,0,0,0,3,1,0,0,0,2,8,46,1,5,0,0,0,3,0,0,0,105,0,0,0,254,0,0,0,3,0,0,0,3,1,0,0,0,1,8,0,0,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,56,91,1,0,0,0,0,0,1,0,0,0,0,0,0,0}; 
 }
 
 byte[] GetEarringData()
 {
-    return new byte[] {0,0,0,0,20,50,5,0,1,0,72,232,1,0,0,0,0,0,72,232,1,0,0,0,0,0,0,251,229,168,8,0,0,0,0,0,96,91,3,0,0,0,0,0,106,24,0,0,0,0,0,0,0,0,0,0,0,0,0,0,18,254,12,0,0,0,0,0,1,0,0,0,183,158,201,5,0,0,96,12,93,179,182,12,0,0,46,0,1,0,0,0,0,0,0,0,1,0,0,0,31,24,108,23,1,0,0,0,0,0,0,0,0,0,0,0,0,5,0,0,0,0,0,0,0,0,4,0,1,0,0,0,64,1,0,0,41,1,0,0,2,240,0,0,0,44,1,0,0,1,1,0,0,18,0,0,0,1,0,0,0,105,0,0,0,3,0,0,0,3,1,0,0,0,3,0,0,0,3,8,0,0,33,3,0,0,1,0,0,0,105,0,0,0,5,0,0,0,3,5,0,0,0,5,0,0,0,2,8,46,1,127,0,0,0,1,0,0,0,105,0,0,0,3,0,0,0,3,3,0,0,0,3,0,0,0,1,8,0,0,118,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1,230,167,254,36,172,177,0,0,1,0,0,0};
+    return new byte[] {20,50,5,0,1,0,160,134,1,0,0,0,0,0,230,183,244,208,19,231,0,0,0,0,0,0,0,0,0,0,0,136,19,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,77,179,9,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,65,117,84,10,0,0,192,9,64,179,182,12,0,0,47,0,1,0,0,0,0,0,0,0,1,0,0,0,31,24,108,23,1,0,0,0,0,0,0,0,0,0,0,0,0,5,0,0,0,0,0,0,0,0,0,0,0,0,0,4,0,200,0,0,0,210,0,0,0,16,0,0,0,197,0,0,0,2,1,0,0,0,1,1,0,0,160,0,0,0,5,0,0,0,105,0,0,0,141,0,0,0,5,0,0,0,3,1,0,0,0,2,3,0,0,5,0,0,0,3,0,0,0,105,0,0,0,249,0,0,0,3,0,0,0,3,1,0,0,0,1,3,0,0,3,0,0,0,3,0,0,0,105,0,0,0,32,3,0,0,2,0,0,0,3,1,0,0,0,3,3,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,160,134,1,0,0,0,0,0,1,0,0,0,0,0,0,0};
 }
 
 byte[] RemoveFromByteArray(byte[] src, int amountToDelete)
