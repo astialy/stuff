@@ -85,6 +85,7 @@
         Expert = 301,
         Emergency_Rescue = 302,
         Precise_Dagger = 303,
+        Full_Bloom = 306,
         Move_Speed_Reduction = 803,
         Atk_Speed_Reduction = 802,
         Defence_Reduction = 801,

@@ -353,6 +353,7 @@ namespace LostArkLogger
             Corrupted_Time_Ring = 213300012,
             Wailing_Chaos_Ring = 213300032,
             Wailing_Aeon_Ring = 213300042,
+            Radiant_Pilgrim_Ring = 213300162,
 
             // legendary
             Splendid_Destroyer_Ring = 213200062,
@@ -373,6 +374,7 @@ namespace LostArkLogger
             Radiant_Inquirer_Necklace = 213300050,
             Corrupted_Time_Necklace = 213300010,
             Wailing_Chaos_Necklace = 213300030,
+            Wailing_Fantasy_Necklace = 213300130,
 
             // legendary
             Splendid_Inquirer_Necklace = 213200050,
