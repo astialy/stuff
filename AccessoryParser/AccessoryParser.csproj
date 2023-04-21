@@ -8,9 +8,4 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\AccessoryOptimizerLib\AccessoryOptimizerLib.csproj" />
-    <ProjectReference Include="..\LostArkLogger\LostArkLogger.csproj" />
-  </ItemGroup>
-
 </Project>
